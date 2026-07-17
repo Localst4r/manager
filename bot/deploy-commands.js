@@ -1,5 +1,6 @@
 ﻿require('dotenv').config({ path: require('path').join(__dirname, '..', '.env') });
-const { REST, Routes } = require('@discordjs/rest');
+const { REST } = require('@discordjs/rest');
+const { Routes } = require('discord-api-types/v10');
 const fs = require('fs');
 const path = require('path');
 
