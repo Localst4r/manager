@@ -1,4 +1,4 @@
-﻿require('dotenv').config({ path: require('path').join(__dirname, '..', '.env') });
+require('dotenv').config({ path: require('path').join(__dirname, '..', '.env') });
 const express = require('express');
 const session = require('express-session');
 const path = require('path');
@@ -6,7 +6,7 @@ const apiRoutes = require('./routes/api');
 
 const app = express();
 const PORT = process.env.DASHBOARD_PORT || 3000;
-const PASSWORD = process.env.DASHBOARD_PASSWORD || 'changeme123';
+const PASSWORD = process.env.SITE_PASS || 'changeme123';
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -52,5 +52,5 @@ app.use('/api', requireAuth, apiRoutes);
 
 app.listen(PORT, () => {
   console.log(`[Dashboard] running at http://localhost:${PORT}`);
-  console.log(`[Dashboard] password is set in .env (DASHBOARD_PASSWORD)`);
+  console.log(`[Dashboard] password is set in environment (SITE_PASS)`);
 });
