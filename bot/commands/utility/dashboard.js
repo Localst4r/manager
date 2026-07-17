@@ -11,7 +11,7 @@ module.exports = {
       .setTitle('Web Dashboard')
       .setDescription('The dashboard is currently running on this machine.\n\nClick below to access it. Log in with the password configured in your `.env` file.')
       .setColor(0x5865f2)
-      .setURL('http://localhost:3000');
+      .setURL('https://manager-43f9.onrender.com');
     
     await interaction.reply({ embeds: [embed], ephemeral: true });
   }
